@@ -19,4 +19,14 @@ Explanation
 In the sample, first we go outside at time 5(exactly before rain) and take second piece of clothes. Then for the second time, at second 8, we go and take third piece.
 """
 
-
+l1 = list(map(int,input().split()))
+l2 = list(map(int,input().split()))
+l3 = list(map(int,input().split()))
+m = 0
+for i in range(1,len(l2)):
+  m = max(m,abs(l2[i-1]-l2[i]))
+  c=0
+  for j in l3:
+      if j <=m and l1[2]!=0:
+          c = c+1 
+print(c) 
